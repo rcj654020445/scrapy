@@ -1,0 +1,27 @@
+目前有两个爬虫，分别为腾讯汽车和新浪汽车爬虫
+
+
+腾讯汽车爬虫
+    1、先关闭配置文件中的这一项qiche.storagepipelines.StoragePipeline': 300,
+    2、然后运行 scrapy crawl One
+    3、开启 配置文件中的这一项qiche.storagepipelines.StoragePipeline': 300,
+    4、然后运行 scrapy crawl Second
+
+
+新浪汽车爬虫
+    1、先关闭配置文件中的这一项qiche.storagepipelines.StoragePipeline': 300,
+    2、然后运行 scrapy crawl SinaOne -o data/sinaOne.json
+    3、然后运行 scrapy crawl SinaSecond -o data/sinaSecond.json
+    4、开启 配置文件中的这一项qiche.storagepipelines.StoragePipeline': 300,
+    5、然后运行  scrapy crawl SinaThrid
+
+
+酷配爬虫
+   1、先关闭存储中间件
+   2、运行scrapy crawl kupei
+   3、启用'qiche.peijianpipelines.PeiJianPipeline'储存中间件
+   4、运行scrapy crawl kupeiStorage
+
+
+1688爬虫
+    1、
